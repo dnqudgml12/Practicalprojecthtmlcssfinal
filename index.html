@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 목록</title>
+</head>
+<body>
+    <h1>게시물 목록</h1>
+    <ul>
+        <!-- JavaScript를 사용하여 배열에서 제목을 동적으로 생성 -->
+        <script>
+            // 게시물 제목을 담고 있는 배열
+            var postTitles = ["게시물 1 제목", "게시물 2 제목", "게시물 3 제목"];
+
+            // 배열을 순회하면서 제목을 리스트 아이템으로 생성
+            postTitles.map(function(title) {
+                document.write('<li><a href="' + title.toLowerCase().replace(/\s/g, '-') + '.html">' + title + '</a></li>');
+            });
+        </script>
+    </ul>
+</body>
+</html>
