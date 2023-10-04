@@ -3,21 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시물 목록</title>
+    <title>My Vocabulary</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .word-list1 {
+            list-style-type: none;
+            padding: 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .word-list-item1 {
+            display: flex;
+            padding-left: 90px;
+         flex-direction: row;
+            padding-top: 10px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .word-list {
+            list-style-type: none;
+            padding: 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .word-list-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+        .word-list-item > span {
+            flex: 1;
+            text-align: center;
+        }
+        .word-list-item.even {
+            background-color: #f0f0f0;  /* Choose a light gray color or adjust as needed */
+        }
+    </style>
 </head>
 <body>
-    <h1>게시물 목록</h1>
-    <ul>
-        <!-- JavaScript를 사용하여 배열에서 제목을 동적으로 생성 -->
-        <script>
-            // 게시물 제목을 담고 있는 배열
-            var postTitles = ["게시물 1 제목", "게시물 2 제목", "게시물 3 제목","게시물 3 제목","게시물 3 제목"];
+    <div class="container">
+        <h1>My Vocabulary</h1>
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            </ul>
+        </header>
 
-            // 배열을 순회하면서 제목을 리스트 아이템으로 생성
-            postTitles.map(function(title) {
-                document.write('<li><a href="https://eloquent-pixie-3d6bfe.netlify.app/view">' + title + '</a></li>');
-            });
-        </script>
-    </ul>
+ 
+        <div style="background-color: red;">
+           
+<select style="margin-left:500px;border-radius:3px;height:28.3px">
+    <option>select level</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<input style="width:80px;height:28.3px;border-radius:3px" type="text" placeholder="search">
+<input
+  style="width: 50px; height: 27.3px; border-radius: 3px; background-color: green; color: #fff"
+  type="button"
+  value="Add"
+  onclick="redirectToAnotherPage()"
+/>
+        </div>
+
+      
+        <div class="word-list1">
+            <div class="word-list-item1">
+                <span>#</span>
+          
+                <span style="padding-left: 170px;">Word</span>
+                <span style="padding-left: 140px;">Meaning</span>
+                <span style="padding-left: 150px;">Date</span>
+            </div>
+        </div>
+            <div class="word-list">
+                <div class="word-list-item">
+                </div>
+                </div>
+            <!-- JavaScript will insert items here -->
+        
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+
+            </ul>
+        </nav>
+
+        <footer>
+            © 2022 Company, Inc.
+        </footer>
+    </div>
+
+    <script>
+        var words = [
+            { id:1,word: "superintendent", meaning: "관리자, 감독관", date: "2022-10-01"},
+            {id:2,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:3,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:4,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:5,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:6,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:7,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:8,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:9,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:10,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:11,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:12,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:13,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:14,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:15,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:16,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:17,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:18,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            // ... add more words as needed
+        ];
+        words.reverse();
+        var itemsPerPage = 8;
+        var currentPage = 1;
+
+        function updateWordList() {
+            var startIndex = (currentPage - 1) * itemsPerPage;
+            var endIndex = startIndex + itemsPerPage;
+            var totalPages = Math.ceil(words.length / itemsPerPage);
+            var wordList = document.querySelector('.word-list');
+            wordList.innerHTML = '';
+
+            for (var i = startIndex; i < endIndex && i < words.length; i++) {
+                var item = words[i];
+                var evenClass = item.id % 2 === 0 ? 'even' : '';
+                var wordItem = `
+                    <div class="word-list-item ${evenClass}">
+                        <span>${item.id}</span>
+                        <span>${item.word}</span>
+                        <span>${item.meaning}</span>
+                        <span>${item.date}</span>
+                    </div>
+                `;
+                wordList.insertAdjacentHTML('beforeend', wordItem);
+            }
+
+            updatePagination(totalPages);
+        }
+
+        function updatePagination(totalPages) {
+            var pagination = document.querySelector('.pagination');
+            pagination.innerHTML = '';
+
+            for (var i = 1; i <= totalPages; i++) {
+                var pageItem = `
+                    <li class="page-item ${i === currentPage ? 'active' : ''}">
+                        <a class="page-link" href="#" data-page="${i}">${i}</a>
+                    </li>
+                `;
+                pagination.insertAdjacentHTML('beforeend', pageItem);
+            }
+        }
+
+        document.querySelector('.pagination').addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                currentPage = parseInt(e.target.getAttribute('data-page'));
+                updateWordList();
+            }
+        });
+
+        updateWordList();
+
+        function redirectToAnotherPage() {
+            // 원하는 다른 페이지의 URL을 여기에 지정하세요.
+            var newPageUrl = 'https://eloquent-pixie-3d6bfe.netlify.app/add'; // 예: 다른 페이지의 URL
+            window.location.href = newPageUrl;
+          }
+    </script>
 </body>
 </html>
