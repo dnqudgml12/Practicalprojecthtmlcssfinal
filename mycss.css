@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+.icon-container {
+    display: flex;
+    gap: 10px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.word-list1 {
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.word-list-item1 {
+    display: flex;
+    padding-left: 70px;
+    flex-direction: row;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+.word-list {
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.word-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+}
+.word-list-item > span {
+    flex: 1;
+    text-align: center;
+}
+.word-list-item.even {
+    background-color: #f0f0f0;  /* Choose a light gray color or adjust as needed */
+}
+
+.select{
+    margin-left:60%;
+    border-radius:3px;
+    height:28.3px
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+        margin: 0;
+    }
+    .word-list-item {
+        flex-direction: row;
+        padding-left: 0;
+    }
+    .word-list-item1 {
+        flex-direction: row;
+        padding-left: 10%;
+    }
+    .word-list-item > span, .word-list-item1 > span {
+        padding: 5px 0;
+    }
+    /* Adjust other elements for mobile here... */
+
+    .select{
+        margin-left:50%;
+        border-radius:3px;
+        height:28.3px
+    }
+}
