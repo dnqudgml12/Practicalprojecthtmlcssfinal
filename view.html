@@ -22,6 +22,8 @@
         
         <!-- Edit 버튼 추가 -->
         <button onclick="redirectToEditPage()">Edit</button>
+        
+        <button onclick="deletetopage()">delete</button>
     </div>
 
     <script>
@@ -62,6 +64,16 @@ function redirectToEditPage() {
     // URL에 매개변수로 전달
     var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date);
     window.location.href = newPageUrl;
+}
+
+function deletetopage(){
+
+    var confirmation = window.confirm("게시물을 삭제할까요");
+    if (confirmation) {
+        // 확인 버튼을 클릭하면 특정 주소로 이동 (예: 'edit_process.php')
+        // 이동하려는 주소를 여기에 지정하세요.
+        window.location.href = 'https://eloquent-pixie-3d6bfe.netlify.app'; // 이동하려는 주소를 설정
+    }
 }
 
     </script>
