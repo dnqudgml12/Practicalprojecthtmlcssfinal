@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 메타 태그와 제목 등 필요한 내용 -->
+</head>
+<body>
+    <h1>Edit Word</h1>
+    <div>
+        <h2>Edit Word Details</h2>
+        <form id="editForm" onsubmit="return validateForm()">
+            <!-- 단어 ID를 전달하기 위한 숨겨진 입력 필드 -->
+            <div>
+                <label for="wordId">Id:</label>
+                <input type="text" id="wordId" name="wordId">
+            </div>
+
+            <div>
+                <label for="word">Word:</label>
+                <input type="text" id="word" name="word">
+            </div>
+            <div>
+                <label for="meaning">Meaning:</label>
+                <input type="text" id="meaning" name="meaning">
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date">
+            </div>
+            <div>
+                <!-- "수정" 버튼을 클릭하면 확인 메시지 표시 -->
+                <input type="button" value="수정" onclick="confirms()">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // URL에서 쿼리 매개변수를 가져오는 함수
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] === variable) {
+                    return pair[1]; // 수정된 부분
+                }
+            }
+            return null;
+        }
+
+        // 페이지 로드 시 쿼리 매개변수에서 데이터 가져와서 표시
+        window.addEventListener('load', function () {
+            var wordId = getQueryVariable('id');
+            var word = decodeURIComponent(getQueryVariable('word'));
+            var meaning = decodeURIComponent(getQueryVariable('meaning'));
+            var date = decodeURIComponent(getQueryVariable('date'));
+
+            // 가져온 데이터를 입력 필드에 설정
+            document.getElementById('wordId').value = wordId;
+            document.getElementById('word').value = word; // 이 부분 수정
+            document.getElementById('meaning').value = meaning;
+            document.getElementById('date').value = date;
+        });
+
+        // 유효성 검사 함수
+        function validateForm() {
+            // 필요한 유효성 검사 로직을 여기에 추가
+            // 수정된 데이터를 "View Word" 페이지로 전달하는 코드를 여기에 추가
+
+            // 유효성 검사가 성공하면 원래 페이지로 이동
+            return true;
+        }
+
+        // "수정" 버튼 클릭 시 확인 대화 상자 표시
+        function confirms() {
+            var confirmation = window.confirm("수정하시겠습니까?");
+            if (confirmation) {
+                // 확인 버튼을 클릭하면 특정 주소로 이동 (예: 'edit_process.php')
+                // 이동하려는 주소를 여기에 지정하세요.
+                window.location.href = 'https://eloquent-pixie-3d6bfe.netlify.app'; // 이동하려는 주소를 설정
+            }
+        }
+    </script>
+</body>
+</html>

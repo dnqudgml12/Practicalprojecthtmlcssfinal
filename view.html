@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- 메타 태그와 제목 등 필요한 내용 -->
 </head>
 <body>
+    <h1>View Word</h1>
+    <div>
+        <h2>Word Details</h2>
+        <div>
+            <strong>ID:</strong> <span id="wordId"></span>
+        </div>
+        <div>
+            <strong>Word:</strong> <span id="word"></span>
+        </div>
+        <div>
+            <strong>Meaning:</strong> <span id="meaning"></span>
+        </div>
+        <div>
+            <strong>Date:</strong> <span id="date"></span>
+        </div>
+        
+        <!-- Edit 버튼 추가 -->
+        <button onclick="redirectToEditPage()">Edit</button>
+    </div>
+
+    <script>
+        // URL에서 쿼리 매개변수를 가져오는 함수
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] === variable) {
+                    return pair[1];
+                }
+            }
+            return null;
+        }
+
+        // 페이지 로드 시 쿼리 매개변수에서 데이터 가져와서 표시
+        window.addEventListener('load', function () {
+            var wordId = getQueryVariable('id');
+            var word = decodeURIComponent(getQueryVariable('word'));
+            var meaning = decodeURIComponent(getQueryVariable('meaning'));
+            var date = decodeURIComponent(getQueryVariable('date'));
+
+            document.getElementById('wordId').textContent = wordId;
+            document.getElementById('word').textContent = word;
+            document.getElementById('meaning').textContent = meaning;
+            document.getElementById('date').textContent = date;
+        });
+
+        // Edit 버튼을 누르면 해당 단어의 ID를 가지고 "edit.html" 페이지로 이동
+// Edit 버튼을 누르면 해당 단어의 ID, 단어, 의미, 날짜를 "edit.html" 페이지로 전달
+function redirectToEditPage() {
+    var wordId = getQueryVariable('id');
+    var word = decodeURIComponent(getQueryVariable('word'));
+    var meaning = decodeURIComponent(getQueryVariable('meaning'));
+    var date = decodeURIComponent(getQueryVariable('date'));
     
+    // URL에 매개변수로 전달
+    var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date);
+    window.location.href = newPageUrl;
+}
+
+    </script>
 </body>
 </html>
