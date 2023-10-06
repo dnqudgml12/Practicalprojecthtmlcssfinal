@@ -23,7 +23,7 @@
         </header>
 
  
-        <div style="background-color: red;">
+        <div>
            
 <select class="select">
     <option>select level</option>
@@ -45,6 +45,7 @@
         <div class="word-list1">
             <div class="word-list-item1">
                 <span>#</span>
+                <span class="class11">level</span>
           
                 <span class="class1">Word</span>
                 <span class="class2">Meaning</span>
@@ -71,24 +72,24 @@
 
     <script>
         var words = [
-            { id:1,word: "superintendent", meaning: "관리자, 감독관", date: "2022-10-01"},
-            {id:2,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:3,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:4,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:5,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:6,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:7,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:8,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:9,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:10,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:11,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:12,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:13,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:14,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:15,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:16,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:17,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
-            {id:18,word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            { id:1,level:"***",word: "superintendent", meaning: "관리자, 감독관", date: "2022-10-01"},
+            {id:2,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:3,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:4,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:5,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:6,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:7,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:8,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:9,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:10,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:11,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:12,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:13,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:14,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:15,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:16,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:17,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
+            {id:18,level:"***",word: "persistent", meaning: "끈질긴, 고집센", date: "2022-09-28"},
             // ... add more words as needed
         ];
         words.reverse();
@@ -108,8 +109,9 @@
                 var evenClass = item.id % 2 === 0 ? 'even' : '';
                 var wordItem = `
                 <div style="cursor:pointer" class="word-list-item ${evenClass}" onclick="viewpage(
-                    ${item.id}, '${item.word}', '${item.meaning}', '${item.date}')">
+                    ${item.id},'${item.level}', '${item.word}', '${item.meaning}', '${item.date}')">
                     <span>${item.id}</span>
+                    <span>${item.level}</span>
                     <span>${item.word}</span>
                     <span>${item.meaning}</span>
                     <span>${item.date}</span>

@@ -21,7 +21,7 @@ body {
 }
 .word-list-item1 {
     display: flex;
-    padding-left: 70px;
+    padding-left: 62px;
     flex-direction: row;
     padding-top: 10px;
     border-top: 1px solid #e0e0e0;
@@ -51,10 +51,12 @@ body {
     height:28.3px;
 }
 
-.class1{padding-left: 19%;}
-.class2{padding-left: 15%;}
-.class3{padding-left: 15%;}
-.class4{padding-left: 13%;}
+
+.class11{padding-left: 15%;}
+.class1{padding-left: 13%;}
+.class2{padding-left: 12%;}
+.class3{padding-left: 12%;}
+.class4{padding-left: 11%;}
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .container {
