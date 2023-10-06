@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 메타 태그와 제목 등 필요한 내용 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mycss.css">
 </head>
-<body>
-    <h1>View Word</h1>
-    <div>
+<body class="bodybody">
+    <h1 class="h1h1">View Word</h1>
+    <form id="postForm" >
         <h2>Word Details</h2>
-        <div>
-            <strong>ID:</strong> <span id="wordId"></span>
+        <div class="div">
+            <label class="label" for="postId">ID:</label> <input  class="text" id="wordId">
         </div>
-        <div>
-            <strong>Word:</strong> <span id="word"></span>
+        <div class="div">
+            <label class="label" for="postWord">Word:</label> <input  class="text" id="word">
         </div>
-        <div>
-            <strong>Meaning:</strong> <span id="meaning"></span>
+        <div class="div">
+            <label class="label" for="postMeaning">Meaning:</label> <input  class="text" id="meaning">
         </div>
-        <div>
-            <strong>Date:</strong> <span id="date"></span>
+        <div class="div">
+            <label class="label" for="postDate">Date:</label> <input  class="text" id="date">
         </div>
         
         <!-- Edit 버튼 추가 -->
-        <button onclick="redirectToEditPage()">Edit</button>
+        <button  class="submit" onclick="redirectToEditPage()">Edit</button>
         
-        <button onclick="deletetopage()">delete</button>
-    </div>
+        <button  class="submit"onclick="deletetopage()">delete</button>
+    </form>
 
     <script>
         // URL에서 쿼리 매개변수를 가져오는 함수
