@@ -10,6 +10,7 @@
 <body class="bodybody">
     <h1 class="h1h1">게시물 추가</h1>
     <form id="postForm" onsubmit="validateForm()">
+        <div class="webbox">
         <div class="div">
             <label class="label" for="postId">ID:</label>
             <input style="width:80%" class="text" type="text" id="postId" name="id" required>
@@ -19,7 +20,9 @@
             <label class="label" for="postWord">Word:</label>
             <input style="width:80%"class="text" type="text" id="postWord" name="word" required>
         </div>
-        
+    </div>
+
+    <div class="webbox">
         <div class="div">
             <label class="label" for="postMeaning">Meaning:</label>
             <input style="width:80%" class="text" type="text" id="postMeaning" name="meaning" required>
@@ -29,6 +32,7 @@
             <label class="label" for="postDate">Date:</label>
             <input style="width:80%" class="text" type="text" id="postDate" name="date" required>
         </div>
+    </div>
         
         <div class="div">
             <input class="submit" type="submit" value="게시">
