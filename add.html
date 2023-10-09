@@ -38,7 +38,7 @@
     </div>
         
         <div class="div">
-            <input class="submit" type="submit" value="게시" onclick="gohome()">
+            <input class="submit" type="submit" value="게시" >
         </div>
     </form>
 
@@ -53,6 +53,11 @@
             if (id === '' || word === '' || meaning === '' || date === '') {
                 alert('모든 필드를 입력하세요.');
                 return false; // 폼 제출 방지
+            }else{
+                alert('게시물이 추가되었습니다.');
+                // 페이지 이동 (예: 'add_process.php')
+                // 이동하려는 주소를 여기에 지정하세요.
+                window.location.href = 'https://eloquent-pixie-3d6bfe.netlify.app'; // 이동하려는 주소를 설정
             }
 
             // 여기에서 추가적인 유효성 검사 로직을 추가할 수 있습니다.
@@ -62,16 +67,6 @@
            
         }
 
-        function gohome(){
-            alert('게시물이 추가되었습니다.');
-            
-            // 페이지 이동 (예: 'add_process.php')
-            // 이동하려는 주소를 여기에 지정하세요.
-
-
-            window.location.href = 'https://eloquent-pixie-3d6bfe.netlify.app'; // 이동하려는 주소를 설정
-           
-        }
     </script>
 </body>
 </html>
