@@ -24,6 +24,16 @@
             <input style="width:80%"class="text" type="text" id="postWord" name="word" required>
         </div>
     </div>
+    <div class="webbox">
+        <div class="div">
+        <label class="label" for="postlevel">level:</label>
+        <div class="div1">
+        <input style="width:80%"class="text" type="text" id="postlevel" name="level" required>
+        <div style="width:80%"class="text"  id="postlevel" name="level"  required>수준입니다</div>
+        </div>
+        </div>
+        </div>
+
 
     <div class="webbox">
         <div class="div">
@@ -49,9 +59,10 @@
             var word = document.getElementById('postWord').value;
             var meaning = document.getElementById('postMeaning').value;
             var date = document.getElementById('postDate').value;
+            var level = document.getElementById('postlevel').value;
 
             // 입력 필드의 값이 모두 채워져 있는지 확인
-            if (id === '' || word === '' || meaning === '' || date === '') {
+            if (id === '' || word === '' || meaning === '' || date === ''||level=='') {
                 alert('모든 필드를 입력하세요.');
                 return false; // 폼 제출 방지
             }else{

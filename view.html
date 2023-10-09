@@ -19,6 +19,15 @@
              <div style="width:80%"  class="text" id="word"></div>
         </div>
     </div>
+    <div class="webbox">
+        <div class="div">
+        <label class="label" for="postlevel">level:</label>
+        <div class="div1">
+        <input style="width:80%"class="text" type="text" id="level" name="level" required>
+        <div style="width:80%"class="text"  id="level" name="level"  required>수준입니다</div>
+        </div>
+        </div>
+        </div>
 
     <div class="webbox">
         <div class="div">
@@ -58,11 +67,13 @@
             var word = decodeURIComponent(getQueryVariable('word'));
             var meaning = decodeURIComponent(getQueryVariable('meaning'));
             var date = decodeURIComponent(getQueryVariable('date'));
+            var level = decodeURIComponent(getQueryVariable('level'));
 
             document.getElementById('wordId').textContent = wordId;
             document.getElementById('word').textContent = word;
             document.getElementById('meaning').textContent = meaning;
             document.getElementById('date').textContent = date;
+            document.getElementById('level').textContent = level;
         });
 
         // Edit 버튼을 누르면 해당 단어의 ID를 가지고 "edit.html" 페이지로 이동
@@ -72,9 +83,10 @@ function redirectToEditPage() {
     var word = decodeURIComponent(getQueryVariable('word'));
     var meaning = decodeURIComponent(getQueryVariable('meaning'));
     var date = decodeURIComponent(getQueryVariable('date'));
+    var level = decodeURIComponent(getQueryVariable('level'));
     
     // URL에 매개변수로 전달
-    var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date);
+    var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date)+ '&level=' + encodeURIComponent(level);
     window.location.href = newPageUrl;
 }
 

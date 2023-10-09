@@ -26,6 +26,15 @@
             </div>
 
         </div>
+        <div class="webbox">
+            <div class="div">
+            <label class="label" for="level">level:</label>
+            <div class="div1">
+            <input style="width:80%"class="text" type="text" id="level" name="level" required>
+            <div style="width:80%"class="text"  id="level" name="level"  required>수준입니다</div>
+            </div>
+            </div>
+            </div>
 
         <div class="webbox">
             <div class="div">
@@ -65,12 +74,14 @@
             var word = decodeURIComponent(getQueryVariable('word'));
             var meaning = decodeURIComponent(getQueryVariable('meaning'));
             var date = decodeURIComponent(getQueryVariable('date'));
+            var level = decodeURIComponent(getQueryVariable('level'));
 
             // 가져온 데이터를 입력 필드에 설정
             document.getElementById('wordId').value = wordId;
             document.getElementById('word').value = word; // 이 부분 수정
             document.getElementById('meaning').value = meaning;
             document.getElementById('date').value = date;
+            document.getElementById('level').value = level;
         });
 
         // 유효성 검사 함수
