@@ -45,9 +45,10 @@
         <div class="word-list1">
             <div class="word-list-item1">
                 <span>#</span>
-                <span class="class11">level</span>
           
                 <span class="class1">Word</span>
+                
+                <span class="class11">level</span>
                 <span class="class2">Meaning</span>
                 <span class="class3">Date</span>
                 <span class="class4">Menu</span>
@@ -109,10 +110,11 @@
                 var evenClass = item.id % 2 === 0 ? 'even' : '';
                 var wordItem = `
                 <div style="cursor:pointer" class="word-list-item ${evenClass}" onclick="viewpage(
-                    ${item.id},'${item.level}', '${item.word}', '${item.meaning}', '${item.date}')">
+                    ${item.id}, '${item.word}','${item.level}', '${item.meaning}', '${item.date}')">
                     <span>${item.id}</span>
-                    <span>${item.level}</span>
+                  
                     <span>${item.word}</span>
+                    <span>${item.level}</span>
                     <span>${item.meaning}</span>
                     <span>${item.date}</span>
                     <span>
@@ -161,7 +163,7 @@
             var newPageUrl = 'https://eloquent-pixie-3d6bfe.netlify.app/add'; // 예: 다른 페이지의 URL
             window.location.href = newPageUrl;
         }
-        function viewpage(id, word, meaning, date) {
+        function viewpage(id, word,level, meaning, date) {
             // 원하는 다른 페이지의 URL을 여기에 지정하세요.
             var newPageUrl = 'view.html?id=' + id + '&word=' + encodeURIComponent(word)+'&level=' + encodeURIComponent(level) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date);
             window.location.href = newPageUrl;
