@@ -163,7 +163,7 @@
         }
         function viewpage(id, word, meaning, date) {
             // 원하는 다른 페이지의 URL을 여기에 지정하세요.
-            var newPageUrl = 'view.html?id=' + id + '&word=' + encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date);
+            var newPageUrl = 'view.html?id=' + id + '&word=' + encodeURIComponent(word)+'&level=' + encodeURIComponent(level) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date);
             window.location.href = newPageUrl;
         }
         
