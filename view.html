@@ -86,7 +86,8 @@ function redirectToEditPage() {
     var level = decodeURIComponent(getQueryVariable('level'));
     
     // URL에 매개변수로 전달
-    var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(date)+ '&level=' + encodeURIComponent(level)+ encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' ;
+    var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date) + '&level=' + encodeURIComponent(level);
+
     window.location.href = newPageUrl;
 }
 
