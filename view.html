@@ -23,7 +23,7 @@
         <div class="div">
         <label class="label" for="postlevel">level:</label>
         <div class="div1">
-        <input style="width:80%"class="text" type="text" id="level" name="level" required>
+        <div style="width:80%"class="text" type="text" id="level" ></div>
         <div style="width:80%"class="text"  id="level" name="level"  required>수준입니다</div>
         </div>
         </div>
@@ -86,7 +86,7 @@ function redirectToEditPage() {
     var level = decodeURIComponent(getQueryVariable('level'));
     
     // URL에 매개변수로 전달
-    var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' + encodeURIComponent(date)+ '&level=' + encodeURIComponent(level);
+    var newPageUrl = 'edit.html?id=' + wordId + '&word=' + encodeURIComponent(date)+ '&level=' + encodeURIComponent(level)+ encodeURIComponent(word) + '&meaning=' + encodeURIComponent(meaning) + '&date=' ;
     window.location.href = newPageUrl;
 }
 
