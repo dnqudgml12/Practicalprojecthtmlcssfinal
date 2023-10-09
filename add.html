@@ -38,7 +38,7 @@
     </div>
         
         <div class="div">
-            <input class="submit" type="submit" value="게시">
+            <input class="submit" type="submit" value="게시" onclick="gohome()">
         </div>
     </form>
 
@@ -59,12 +59,19 @@
             // 예를 들어, 날짜 형식이 올바른지 검사하거나 다른 사용자 정의 규칙을 적용할 수 있습니다.
 
             // 유효성 검사가 통과되면 게시물이 추가되었다는 알림을 표시하고 다른 페이지로 이동
+           
+        }
+
+        function gohome(){
             alert('게시물이 추가되었습니다.');
             
             // 페이지 이동 (예: 'add_process.php')
             // 이동하려는 주소를 여기에 지정하세요.
+
+
             window.location.href = 'https://eloquent-pixie-3d6bfe.netlify.app'; // 이동하려는 주소를 설정
             return false; // 폼 제출 방지
+
         }
     </script>
 </body>

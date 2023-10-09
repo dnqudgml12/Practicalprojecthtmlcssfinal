@@ -34,7 +34,7 @@
       <!-- Edit 버튼 추가 -->
 <input type="button" class="submit" value="Edit" onclick="redirectToEditPage()">
   
-        <input type="submit" value="Delete"  class="submit"onclick="deletetopage()">
+        <input type="submit" value="Delete"  class="submit" onclick="deletetopage(event)">
         <!--submit 제출하여서 새로 고침함, reset은 안에 값 초기화-->
     </form>
 
@@ -78,13 +78,13 @@ function redirectToEditPage() {
     window.location.href = newPageUrl;
 }
 
-function deletetopage(){
-
+function deletetopage(event){
+    event.preventDefault();
     var confirmation = window.confirm("게시물을 삭제할까요");
     if (confirmation) {
         // 확인 버튼을 클릭하면 특정 주소로 이동 (예: 'edit_process.php')
         // 이동하려는 주소를 여기에 지정하세요.
-        window.location.href = 'https://eloquent-pixie-3d6bfe.netlify.app'; // 이동하려는 주소를 설정
+        window.location.href = 'https://eloquent-pixie-3d6bfe.netlify.app/'; // 이동하려는 주소를 설정
     }
 }
 /*
