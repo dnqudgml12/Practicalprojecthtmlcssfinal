@@ -62,7 +62,7 @@
             var level = document.getElementById('postlevel').value;
 
             // 입력 필드의 값이 모두 채워져 있는지 확인
-            if (id === '' || word === '' || meaning === '' || date === ''||level=='') {
+            if (id.value.trim() === '' || word.value.trim() === '' || meaning.value.trim() === '' || date.value.trim() === ''||level.value.trim()==='') {
                 alert('모든 필드를 입력하세요.');
                 return false; // 폼 제출 방지
             }else{
