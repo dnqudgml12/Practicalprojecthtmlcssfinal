@@ -9,7 +9,7 @@
 </head>
 <body class="bodybody">
     <h1 class="h1h1">게시물 추가</h1>
-    <form id="postForm" onsubmit="validateForm()">
+    <form id="postForm" onsubmit="validateForm(event)">
 
         <h2 class="h1h1">Add Word Details</h2>
 
@@ -43,7 +43,8 @@
     </form>
 
     <script>
-        function validateForm() {
+        function validateForm(event) {
+            event.preventDefault(); 
             var id = document.getElementById('postId').value;
             var word = document.getElementById('postWord').value;
             var meaning = document.getElementById('postMeaning').value;
