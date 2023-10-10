@@ -49,6 +49,8 @@
         
         <div class="div">
             <input class="submit" type="submit" value="게시" >
+            <button class="submit" type="button" onclick="goBack()">뒤로가기</button>
+
         </div>
     </form>
 
@@ -78,7 +80,10 @@
             // 유효성 검사가 통과되면 게시물이 추가되었다는 알림을 표시하고 다른 페이지로 이동
            
         }
-
+        function goBack() {
+            window.history.back();
+        }
+        
     </script>
 </body>
 </html>

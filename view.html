@@ -45,6 +45,8 @@
   
         <input type="submit" value="Delete"  class="submit" onclick="deletetopage(event)">
         <!--submit 제출하여서 새로 고침함, reset은 안에 값 초기화-->
+        <button class="submit" type="button" onclick="goBack()">뒤로가기</button>
+
     </form>
 
     <script>
@@ -126,6 +128,11 @@ function deletetopage() {
 }
 
 */
+
+        // 뒤로가기 함수
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 </html>
