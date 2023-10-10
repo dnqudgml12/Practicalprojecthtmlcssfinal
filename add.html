@@ -64,10 +64,7 @@
             var level = document.getElementById('postlevel').value;
 
             // 입력 필드의 값이 모두 채워져 있는지 확인
-            if (id.value.trim() === '' || word.value.trim() === '' || meaning.value.trim() === '' || date.value.trim() === ''||level.value.trim()==='') {
-                alert('모든 필드를 입력하세요.');
-                return false; // 폼 제출 방지
-            }else{
+
                 alert('게시물이 추가되었습니다.');
                 // 페이지 이동 (예: 'add_process.php')
                 // 이동하려는 주소를 여기에 지정하세요.
@@ -79,7 +76,7 @@
 
             // 유효성 검사가 통과되면 게시물이 추가되었다는 알림을 표시하고 다른 페이지로 이동
            
-        }
+        
         function goBack() {
             window.history.back();
         }
